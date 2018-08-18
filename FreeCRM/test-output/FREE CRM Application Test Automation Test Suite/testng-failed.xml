@@ -6,13 +6,21 @@
   </listeners>
   <test name="Free CRM App Test Cases(failed)">
     <classes>
-      <class name="com.freecrm.qa.testcase.ContactsPageTest">
+      <class name="com.freecrm.qa.testcase.HomePageTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="clickOnCampaigns_NewEmailCampaignTest"/>
+          <include name="clickOnCampaigns_NewPrintCampaignTest"/>
+          <include name="clickOnCampaigns_MailAccountsTest"/>
+          <include name="clickOnCampaigns_NewTextSMSCampaignTest"/>
+          <include name="clickOnCampaigns_TextSMSTemplatesTest"/>
+          <include name="clickOnDocs_NewWordMergeTemplateTest"/>
+          <include name="clickOnCampaigns_NewWordMergeTemplateTest"/>
+          <include name="clickOnCampaigns_EmailTemplatesTest"/>
           <include name="setUp"/>
-          <include name="verifyAddContacts"/>
+          <include name="clickOnCampaigns_TextSMSCreditsTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.freecrm.qa.testcase.ContactsPageTest -->
+      </class> <!-- com.freecrm.qa.testcase.HomePageTest -->
     </classes>
   </test> <!-- Free CRM App Test Cases(failed) -->
 </suite> <!-- Failed suite [FREE CRM Application Test Automation Test Suite] -->

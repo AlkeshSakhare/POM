@@ -6,10 +6,12 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.freecrm.qa.util.TestUtil;
@@ -20,6 +22,8 @@ public class Testbase {
 	public static Properties properties;
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
+	public static Actions actions;
+	public static JavascriptExecutor javascriptExecutor;
 
 	public Testbase() {
 		properties = new Properties();
@@ -63,7 +67,8 @@ public class Testbase {
 		// EventFiringWebDriver
 		e_driver.register(eventListener);
 		driver = e_driver;
-
+		actions = new Actions(driver);
+		javascriptExecutor = (JavascriptExecutor) driver;
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts()

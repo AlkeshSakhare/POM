@@ -12,6 +12,8 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.freecrm.qa.base.Testbase;
 
@@ -21,8 +23,8 @@ public class TestUtil extends Testbase {
 	public static int PAGE_LOAD_TIMEOUT = 30;
 	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir")
 			+ "/src/main/java/com/freecrm/qa/testdata/TestData.xlsx";
-	static Workbook book;
-	static Sheet sheet;
+	public static Workbook book;
+	public static Sheet sheet;
 
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
@@ -59,6 +61,13 @@ public class TestUtil extends Testbase {
 
 		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/"
 				+ System.currentTimeMillis() + ".png"));
+
+	}
+
+	public static void switchToFrame(WebDriver driver, WebElement frameName,
+			WebElement elementName) {
+		driver.switchTo().frame(frameName);
+		actions.moveToElement(elementName).build().perform();
 
 	}
 }

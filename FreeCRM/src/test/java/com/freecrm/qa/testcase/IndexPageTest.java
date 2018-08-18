@@ -1,7 +1,7 @@
 package com.freecrm.qa.testcase;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.freecrm.qa.base.Testbase;
@@ -15,7 +15,7 @@ public class IndexPageTest extends Testbase {
 		super();
 	}
 
-	@BeforeClass
+	@BeforeMethod
 	public void setUp() {
 		initialization();
 		indexPage = new IndexPage();
@@ -27,7 +27,7 @@ public class IndexPageTest extends Testbase {
 				properties.getProperty("password"));
 	}
 
-	@AfterClass
+	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 	}

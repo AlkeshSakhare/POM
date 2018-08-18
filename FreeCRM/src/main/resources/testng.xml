@@ -8,9 +8,11 @@
 
 	<test name="Free CRM App Test Cases">
 		<classes>
-			<class name="com.freecrm.qa.testcase.IndexPageTest"></class>
+			
 			<class name="com.freecrm.qa.testcase.HomePageTest"></class>
-			<class name="com.freecrm.qa.testcase.ContactsPageTest"></class>
+			<!-- class name="com.freecrm.qa.testcase.ContactsPageTest"></class>
+			<class name="com.freecrm.qa.testcase.IndexPageTest"></class>
+			 -->
 			
 		</classes>
 	</test>

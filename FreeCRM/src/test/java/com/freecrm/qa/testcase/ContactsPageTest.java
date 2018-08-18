@@ -1,7 +1,7 @@
 package com.freecrm.qa.testcase;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -22,7 +22,7 @@ public class ContactsPageTest extends Testbase {
 		super();
 	}
 
-	@BeforeClass
+	@BeforeMethod
 	public void setUp() {
 		initialization();
 		indexPage = new IndexPage();
@@ -46,7 +46,7 @@ public class ContactsPageTest extends Testbase {
 
 	}
 
-	@AfterClass
+	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 	}

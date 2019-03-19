@@ -1,0 +1,119 @@
+1. Create Maven Project
+	Go to Eclipse and click on JavaEE
+	File -> New -> MavenProject
+	Check the check box Create a Simple Project
+	Give GroupId and Artifact
+	Click on Finish
+
+2. Expand Maven Project and double click on pom.xml
+Add the below dependencies in the project tag
+<dependencies>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.10.0</version>
+    </dependency>  
+
+    <dependency>
+    	<groupId>io.appium</groupId>
+	    <artifactId>java-client</artifactId>
+	    <version>6.0.0-BETA1</version>
+    </dependency>
+
+
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>3.17</version>
+</dependency>
+
+    <dependency>
+  	<groupId>org.testng</groupId>
+  	<artifactId>testng</artifactId>
+  	<version>6.8.8</version>
+  	<scope>test</scope>
+    </dependency> 
+</dependencies>
+
+
+3. Implement the testNG program in src/test/java
+
+4. Create xml file under the project folder and run the scripts
+
+5. To run the scripts from command prompt. Add the below code (build code) in pom.xml file
+  
+  <properties>
+	<jre.level>1.7</jre.level>
+	<jdk.level>1.7</jdk.level>
+  </properties>
+<build>
+<plugins>
+<!-- Compiler plug-in -->
+<plugin>				
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<configuration>
+<source>${jdk.level}</source>
+<target>${jdk.level}</target>
+</configuration>
+</plugin>
+<!-- Below plug-in is used to execute tests -->
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.18.1</version>
+<configuration>
+<suiteXmlFiles>
+<!-- TestNG suite XML files -->					<suiteXmlFile>TestRun.xml</suiteXmlFile> 
+</suiteXmlFiles>
+</configuration>
+</plugin>
+</plugins>
+</build>
+
+
+6. To run the scripts use the below commands
+
+mvn clean -> to remove the existing build files
+
+mvn install -> to run and create the build file (jar file) in target folder
+
+mvn test -> to run the scripts 
+
+
+
+Note: To run the maven project from command promt
+
+Download maven from the below path
+
+https://maven.apache.org/download.cgi
+
+Create Environment variables:
+
+1. M2_HOME 
+   E:\apache-maven-3.3.3-bin\apache-maven-3.3.3
+
+2. m2
+   E:\apache-maven-3.3.3-bin\apache-maven-3.3.3\bin
+
+mvn test
+mvn install
+
+
+
+To add maven to eclipse:
+
+M2Eclipse--http://download.eclipse.org/technology/m2e/releases
+
+
+
+
+
+
+
+
+
+
+
+
+

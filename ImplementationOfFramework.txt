@@ -263,6 +263,23 @@ public class ExtentReporterNG implements IReporter {
 <listeners>
 	<listener class-name="com.freecrm.qa.ExtentReporterNG.ExtentReporterNG" />
 </listeners>
+
+testng.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AMAZON Application Test Automation Test Suite">
+
+	<listeners>
+		<listener class-name="com.amazon.ExtentReporterNG.ExtentReporterNG" />
+	</listeners>
+
+	<test name="AMAZON Test Cases">
+		<classes>
+			<class name="com.amazon.TestPage.FirstPageTest"></class>
+		</classes>
+	</test>
+</suite>
+
 ---------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------Reading data from database---------------------------------------------------------------------
 

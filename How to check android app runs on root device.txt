@@ -1,0 +1,4 @@
+Open root checker & check device is rooted or not
+Install test app on root device & check app runs or not if not goto step 3
+Install & open "hide my root" app , allow all permission & hide for 15  min , reboot mobile & run test app .. if not goto step 4
+Open Xposed  installer app &  search for root cloak . Download & open , add package of app , reboot mobile & run test app.. if not then conclusion is  "App can't be install on root device"

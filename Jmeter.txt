@@ -1,0 +1,54 @@
+Jmeter Beginner Tutorial - 2 :
+How to create first Jmeter Test
+=========================
+
+Step 1 - Start Jmeter
+
+Step 2 - Create a TestPlan
+
+Step 3 - Create a Thread Group (Users)
+
+Step 4 - Add a Sampler (Http)
+
+Step 5 - Add Listeners
+
+Step 6 - To Run the Test
+
+
+1.Add Thread Group--- No of users
+No.of thread=10
+Ramp up period=20
+
+every 2 sec 1 user will be added
+In 20 sec 10 user will be added . so 20 user will be hitting webapplication
+
+
+2.Add request== USer>sampler>httpReuest
+
+3. Add Listner ==> User>luster>view results in table
+
+
+Latency==response gets first bytes
+                    User>luster> View results in tree
+can view sample request and response
+------------------------------------------------------------------------
+Tutorial NO 3
+
+
+Assertion=check on the response
+1.Add Assertion=Users>Assertion>response Assertion								
+2.Assertion Result==User>Listeners>assertion Result
+3.Duration Assertion==Users>Assertion>Duration Assertion
+4.Size Assertion=users>Assertion>Size Assertion
+5.HTML Assertion=USer>Assertion>HTML Assertion ---- check format of html,, can write result in txt file
+6.Xpth Assertion(For API testing)===check node or xpath 
+
+---------------------------------------------------------------------------------
+Tutorial 4
+
+Listeners---Gather information about performance test.. used to view result
+
+
+
+
+

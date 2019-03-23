@@ -1,0 +1,144 @@
+Android app reverse engineering
+free  protection tool to 
+1.Progaurd --  free-- Prebundle with java-- act as shrinker
+2.DexGaurd --- commercial--- string encode + progaurd  + license protection (license tempered app won't run). --- (decompile --- runtime error)
+
+key -- keep on server if online
+key---- keep on device--- use random no...(shared preference get random no) 
+
+
+obfuscation + Shrinker + optimize = Progaurd
+how to user progaurd
+Progaurd.file_name
+
+
+progaurd.
+
+sample progaurd file 
+defacto 
+files dont have obfuscation
+
+dont have to obfuscation--- libraries
+any warning ---- pls ignore
+
+name of the method or variable won't be identified 
+ 
+ 
+ 
+hacking tool
+1.Dex2Jar
+2.Android Gaurd --work on linux --- show exact flow of app.. show what happen when click on button. which function is called.
+3.apktool
+4.
+
+
+Android app build process
+
+Java files--> javac-- > class files--  (jar signer -- signed apk) 
+							dvm
+		apk builder(pre bundle with sdk) <--dex files-
+		
+		
+		
+		
+
+1.Apk extractor--- Generate apk 
+2.Assest  folder --- supply anything which is not (JAVA, XML ,image )-- it may be mp3 or video or SQL lite DB(sql lite db browser accessible in rooted device offline database) ...  
+3.res-- image -- there is no way to protect image...
+4. res-- layout---- we can encode.. & can decode easily
+5.Manifest-- (setting of app)  encoded manifest--
+6.hidden api ----  (search http)
+7.axml printer
+
+
+other technique to protection
+junk byte insertion
+dynamic code loading
+self modifying code
+obfuscation at dex level
+protect  sensitive api----- ()need to register on google .. google give key--- you get token... authorized  fire query on google server (checked) and pass auth token.. 
+Good Read:---api protection google play service
+self signed https api... use post
+
+sql cipher--- free tool to encrypt db
+
+
+
+
+
+
+Invalid userid & pass -- > replace with Correct 
+Valid userid & invalid pass -- > replace with Correct
+Invalid userid & valid pass -- > replace with correct
+valid user id & pass  --- > replace with  valid 2nd userid & pass
+If single json string which contains Userid+password+data(it may be Random String or some other data implemented for security)---- > replace with 2ndcorrect userid & password
+
+
+web sql injection
+pay.aspx?bal='<script>alert('XSS');</script>&m=VISA
+Pay.aspx?bal=60.12&m=VISA'or1==1
+
+
+
+App Permission
+
+If you recently updated, check to see if you switched to Google Play services 7.5 with a line in your build.gradle file such as
+compile 'com.google.android.gms:play-services:7.5.0'
+Google Play services 7.5 automatically adds required permissions - when you use com.google.android.gms:play-services - that says you are using every part of Google Play services, potentially adding more permissions than you intended.
+
+<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+<uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+
+
+Developing for Android vs developing for iOS – in 5 rounds
+
+1 Development :Draw
+2 Design Guidelines : Android
+3 Fragmentation :iOS
+4 Publishing and Restrictions :Android
+5 Profits :iOS 
+----------------------------------------------------------------------------------------------------------------------------------List of custom Android firmware
+
+
+1  CyanogenMod. (Yu Yureka Plus)
+2  Paranoid Android.
+3  MIUI. (Xiaomi)
+4  AOKP ROM (Android Open Kang Project)
+5  Slim Bean.
+6  Pac-man Rom.
+7  Euphoria Rom.
+8  Carbon Rom.
+9  Dirty Unicorns.
+10 OmniRom
+11 CopperheadOS
+12 Indus OS
+13 LeWa OS
+14 LineageOS
+15 MoKee
+16 Replicant
+17 Resurrection Remix OS
+18 Smartisan OS
+19 Yun OS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+data/data/<package name > / share pref.xml
+                    
+

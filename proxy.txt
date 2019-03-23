@@ -1,0 +1,5 @@
+ZAP=127.0.0.1:8080 or change like burp in tools>local connection
+CSRF Tester=127.0.0.1:8008
+20=192.168.0.20:8081
+201=192.168.201.1:8081
+202=192.168.202.1:8082

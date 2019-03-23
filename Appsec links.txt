@@ -1,0 +1,34 @@
+Web resources
+
+http://securitytube.net
+http://securityfocus.com/
+http://bangalorehackers.com/
+http://softwaretestingnews.com/security-testing
+http://owasp.com/
+Security testing checklist – http://tuppad.com/blog/2012/03/29/security-testing-checklist-for-web-application/
+Security testing add-on(s) mind-map http://moolya.com/blog/2011/03/04/addon-mindmap-for-testers-from-moolya/
+Sysinternals Suite – Bunch of awesome utilities for testing activity – Google it and download the zip
+file from Microsoft website.
+http://foundstone.com/
+Some of the security testing checklist mind-map by Darren McMillan –
+http://www.bettertesting.co.uk/content/?p=1372
+http://testingperspective.com/
+
+Books suggested
+The Art of Deception by Kevin Mitnick (Flipkart.com – It’s available)
+Hacking for Dummies by Kevin Beaver (e-book available at http://issuu.com/ – Search it there)
+Web Services Hacking by Sreeraj Shah (Web Services Testing Book)
+
+Learning to hack on these websites
+http://hackthissite.org/
+There are different levels here and it gets more and more difficult over the duration after you
+complete the exercise. Please do not look into solutions or google for it or else it is fun destroyer.
+http://hellboundhackers.org/
+http://haxme.org/
+
+Things to do once back to desk
+1. Install add-ons which can help you to perform security testing
+2. Install Burp Suite, WebScarab
+3. Subscribe to some of the hacking news and just read the headlines whenever you get time
+4. Have passion for hacking / security testing / penetration testing
+Follow these guidelines and you will

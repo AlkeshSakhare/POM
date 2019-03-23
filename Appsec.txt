@@ -1,0 +1,9 @@
+jdk
+Oracle virtual box
+Genymotion
+
+Decompile Apk
+1.Rename .apk to .zip
+2.Extract Zip file
+3.copy classes.dex  file inside dex2jar folder
+4.open cmd and type "d2j-dex2jar.bat classes.dex" without quotes.

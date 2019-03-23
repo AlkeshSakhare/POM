@@ -1,0 +1,23 @@
+how to check device is rooted or not --- Rootchecker
+
+how to check app is working on rooted device
+ 1.HideMyRoot
+ 2.RootCloak--- (Need Xposed Installer app in rooted device.)
+ 
+how to bypass SSL pinning--- SSL unpinned --(Need Xposed Installer app in rooted device.)
+
+check Root device storage
+ 1.Hack App Data
+ 2.xplorer------ Root/ data / data -- App package- preference.
+ 3.File viewer ---Root/ data / data -- App package- preference.
+ 4.Dexplorer- ---check user permission.. Android manifest.
+ 5.SQLite DB Reader-- to view database of installed apps(offline apps).
+ 6.CatLog --------- To view logs of app
+ log.i("jjafjdajf")
+ System.out.println("isdnasdad");
+ 
+ 
+ 
+https://excellmedia.dl.sourceforge.net/project/pentestbox/PentestBox-with-Metasploit-v2.2.exe
+https://excellmedia.dl.sourceforge.net/project/pentestbox/PentestBox-v2.2.exe
+http://192.168.0.171/HostDemo/Algo.aspx

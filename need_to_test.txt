@@ -1,0 +1,114 @@
+------------------------------------------------------------
+COMMON VULNERABILITIES IN WEB APPLICATIONS
+------------------------------------------------------------
+
+1.Cross Site Scripting (XSS) (Paid in Burp Suite, We can do it manually) 
+The potential threat of XSS is allowing the execution of scripts in the victim's
+browser that could hijack user sessions, deface websites, and possibly introduce
+worms, etc. This flaw is caused by the improper validation of user-supplied
+data when an application takes that data and sends it to a web browser without
+first validating or encrypting the content.
+
+Example - (Burp Suite tutorial)
+https://support.portswigger.net/customer/portal/articles/1965737-using-burp-to-find-cross-site-scripting-xss-issues
+
+Manually - https://xss-game.appspot.com/
+
+
+
+-------------------------------------------------------------
+
+2. Injection Flaws(SQL injection) - (Paid in Burp Suite, We can do it manually) 
+The potential threat from this flaw is that an attacker could trick the application
+into executing unintended commands or into changing system data.
+Particularly SQL injection, are common in web applications. Injection
+occurs when user-supplied data is sent to an interpreter as part of a command or
+query.
+
+Example - (Burp Suite tutorial)https://support.portswigger.net/customer/portal/articles/1965677-Methodology_SQL_Injection_.html 
+
+Manually - http://sqlzoo.net/hack/
+
+
+
+
+----------------------------------------------------------------
+
+3. Malicious File Execution 
+
+The potential threat to code vulnerable to remote file inclusion (RFI) is that it
+could allow attackers the opportunity to include hostile code and data, resulting
+in devastating attacks, such as a total compromise of the server. Malicious file
+execution attacks can affect PHP, XML and any framework that accepts
+filenames or files from users.
+
+-----------------------------------------------------------------
+
+4. Insecure Direct Object Reference 
+The potential threat here is that attackers could manipulate those references to
+access other objects without authorisation. A direct object reference occurs
+when a developer exposes a reference to an internal implementation object,
+such as a file, directory, database record, or key, as a URL or form parameter.
+
+Example - (Burp Suite tutorial)https://support.portswigger.net/customer/portal/articles/1965691-using-burp-to-test-for-insecure-direct-object-references
+
+------------------------------------------------------------------------
+
+5. Cross Site Request Forgery (CSRF) (Paid in Burp Suite, We can do it manually) 
+The potential threat from this flaw is that it might force a logged-on victim's
+browser to send a pre-authenticated request to a vulnerable web application,
+which then forces the victim's browser to perform a hostile action to the benefit
+of the attacker. CSRF can be as powerful as the web application that it attacks.
+
+Example - (Burp Suite tutorial)
+https://support.portswigger.net/customer/portal/articles/1965674-using-burp-to-test-for-cross-site-request-forgery-csrf-
+
+Manually - 1) https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
+and 2) http://www.tutorialspoint.com/security_testing/cross_site_request_forgery.htm
+
+----------------------------------------------------------------------
+
+6. Information Leakage and Improper Error Handling (Manually)
+The potential threat from this flaw is that attackers can use this weakness to
+steal sensitive data, or conduct more serious attacks. Applications can
+unintentionally leak information about their configuration, internal workings, or
+violate privacy through a variety of application problems.
+
+Manually - https://www.owasp.org/index.php/Top_10_2007-Information_Leakage_and_Improper_Error_Handling
+
+------------------------------------------------------------
+
+7. Broken Authentication and Session Management
+The potential threat here is that attackers might compromise passwords, keys,
+or authentication tokens in order to assume the identity of other users. This flaw 
+Web Application Security Page 9 of 25
+is caused when account credentials and session tokens are not properly
+protected.
+
+Example - (Burp Suite tutorial)https://support.portswigger.net/customer/portal/articles/1964073-Methodology_Attacking%20Session%20Management_Hacking%20Cookies.html
+
+------------------------------------------------------------------------
+
+8. Insecure Cryptographic Storage
+This potential threat comes when attackers use poorly protected data to conduct
+identity theft and other crimes, such as credit card fraud. This flaw is due to
+web applications not making proper user of cryptographic functions to protect
+data and credentials.
+
+-------------------------------------------------------------------
+
+9. Insecure Communications
+This flaw comes from the possible leakage of sensitive information over the
+network communication infrastructure. This is caused by a failure to encrypt
+network traffic when it?s necessary to protect sensitive communications.
+
+--------------------------------------------------------------------------
+
+10. Failure to Restrict URL Access
+This flaw gives attackers the opportunity to access and perform unauthorised
+operations by accessing those URLs directly. This flaw is caused by
+applications that only protect sensitive functionality when preventing the
+display of links or URLs to unauthorised users.
+Application developers should be aware of these common security flaws and develop
+programming standards that avoid such problems in the coding phase. A good reference
+is the OWASP Guide to Building Secure Web Applications5

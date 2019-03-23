@@ -1,0 +1,109 @@
+01. SQL Injection
+02. Broken Authentication and Session Management 
+03. Sensitive Data Exposure
+04. Missing Function Level Access Control
+05. source code obfuscation
+06. Print Stack Trace used in application source Code
+07. An adversary can bypass login
+08. sensitive data from the local storage of the device (Use Application in device dex- Explorer)
+09. Don't allow Application to installed on the rooted device
+10. Application has set insecure permissions.
+11. xml file should not contain data in plan text (login user name and passwrod or any other information) (Same as 8th).
+12. Don't allow to access Local Data base (Same as 8th).
+13. Response tampearing
+14. If Application use Web View Check (Java Script should be disable).
+15. An adversary can enumerate valid username (Check Error Messages) (Both Mobile and Desktop) 
+16. Last login time and last few activities are not displayed on valid user login
+17. SSL pinning Should be implemanted
+18. debuggable false  in n your app module's build.gradle
+19. Older version of Application Framework used(use 17)
+
+
+
+
+
+
+Root Bypass
+BuildProp Editor
+Hide my Root
+MOBILE APPLICATION SECURE PRACTISES
+Criterion 1: No/Secure storage of sensitive data in the device The application must demonstrate adequate
+measures to protect sensitive data from being accessed whenever the device is lost or stolen. The application must
+not store sensitive data in easily reachable devices such as a memory card.
+Criterion 2: Protects against data leakage The application must not leak data through channels such as the
+application cache, logs, temporary directories, etc. wherein the data is usually retained indefinitely. Note:This
+criterion considers the OWASP Mobile "side channel attacks" to be within scope.
+Criterion 3: Protects against popular server-side attacks The application must demonstrate, through testing, that it
+is not vulnerable to popular server-side attacks. Note:: "Popular attacks" include, but are not limited, to exploits
+documented by organizations such as The Open Web Application Security Project
+Criterion 4: Defends against the Threat Profile The application must demonstrate that it defends itself against the
+threats specified in a Threat Profile that has been developed specifically for the mobile application. Note I:A threat
+describes the goal of an adversary. According to the National Information Systems Security Glossary, "a threat is
+any circumstance or event that has the potential to harm an information system via unauthorized access,
+destruction, disclosure, data modification, and/or denial of service". Note II:The threat profile is a list of all the
+possible threats to an application. These threats include the violation of the business rules and authorization rules
+of the application. Note III:This criterion applies to the High and Medium Risk vulnerabilities that allow such threats
+to be realized.
+Criterion 5: No sensitive data are sent to other websites/applications in an insecure manner The application must
+not send sensitive data to external sites through tokens, the referrer, etc. If the application needs to share data with
+other applications on the same device, then the data should be shared in a secure manner. Note:Implementations
+like URL Schemes and UID or Application sharing are within the scope of this criterion.
+Criterion 6: Secure implementation of OS-related features Mobile Operating Systems implement functionalities
+that use mobile OS-related features. The application must implement these features securely, without introducing
+vulnerabilities. Note:This does not include OS-level vulnerabilities related to features that are not used by the
+application.
+Criterion 7: Re-authentication required for sensitive activities The application must re-authenticate the user before
+allowing the user to perform an operation involving sensitive data. Examples of operations involving sensitive data
+are – Change Password, Transfer Funds and Transaction Approval.
+Criterion 8: Defends against the unauthorized usage of device resources The application must ensure that
+untrusted input is validated before it is used by any device resource. The application must not abuse the device
+resources.
+Note I:Mobile device resources include but are not limited to SMSs, calls, cameras and microphones. Note II:This
+criterion checks for the usage of device resources as can be verified by the results of device and resource
+monitoring tests on the running mobile application.
+Criterion 9: Backend services protected against known vulnerabilities Mobile applications connect to backend
+services in order to send and receive data. These services must be protected against vulnerabilities that are
+directly exploitable throughout the application. Note:This criterion does not consider the exploitable vulnerabilities
+on the backend (a web service or a database), which cannot be directly accessed by the mobile application being
+tested.
+Criterion 10: Backend server protected against known vulnerabilities The backend server must be updated and
+protected against known vulnerabilities. The web service running on the server that houses the application must not
+be vulnerable to publicly known exploitable vulnerabilities.
+Criterion 11: Protect sensitive data in transmission The application must take adequate measures to protect
+sensitive data from being stolen over the network. It must protect the data in transmission by implementing strong
+encryption.
+Criterion 12: No sensitive data in the source code The application's source code should be protected against data
+leakage via disassembly of the application package. The application should not hardcode secrets like the
+passwords or encryption keys in the application itself.
+
+
+Android App for appsec
+1.RootCloak plus
+2.Hide my root
+3.superuser
+4.CheatDroid
+5.Rootchecker
+6.X-plorer, 
+7.Dexplorer
+8.Show java
+9.file viewer
+10.
+d2j-dex2jar.bat classes.dex
+
+Auto logout condition.
+1. Wait till auto log out time
+2. change time in future and check
+3. close application without log out
+4. Minimize applicatoin
+5. setting forced closed
+
+
+(‘ or 1=1--)
+
+
+
+
+
+
+
+
